@@ -37,3 +37,7 @@ DEFAULT_SYMBOL   = "BTC"
 DEFAULT_PAIR     = "BTCUSDT"
 DEFAULT_TF       = "4h"
 DEFAULT_EXCHANGE = "Binance"
+
+# ── SMC detector tuning ───────────────────────────────────────
+OB_LOOKBACK      = int(os.getenv("OB_LOOKBACK", "10"))
+FVG_MIN_SIZE_PCT = float(os.getenv("FVG_MIN_SIZE_PCT", "0.05"))

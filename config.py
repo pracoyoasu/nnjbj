@@ -1,43 +1,44 @@
-"""
-Application configuration.
-
-Loads API keys from environment (or a local .env file when python-dotenv
-is installed) and exposes default symbols / endpoints used across the app.
-"""
-
 import os
+from dotenv import load_dotenv
 
-try:
-    from dotenv import load_dotenv
-    load_dotenv()
-except Exception:
-    pass
+load_dotenv()
 
+# ──────────────────────────────────────────────
+#  API KEYS
+# ──────────────────────────────────────────────
+COINGLASS_API_KEY = os.getenv("COINGLASS_API_KEY", "YOUR_COINGLASS_API_KEY")
 
-# ── API endpoints ─────────────────────────────────────────────
-CG_BASE_URL = os.getenv(
-    "COINGLASS_BASE_URL",
-    "https://open-api-v4.coinglass.com",
-)
-BINANCE_BASE_URL = os.getenv(
-    "BINANCE_BASE_URL",
-    "https://api.binance.com",
-)
+# ──────────────────────────────────────────────
+#  DEFAULT TRADING PAIR & TIMEFRAME
+# ──────────────────────────────────────────────
+DEFAULT_SYMBOL   = "BTC"          # BTC | ETH | dll
+DEFAULT_PAIR     = "BTCUSDT"
+DEFAULT_EXCHANGE = "Binance"
+DEFAULT_TF       = "4h"           # 15m | 1h | 4h | 1d
 
-# ── API keys / headers ────────────────────────────────────────
-COINGLASS_API_KEY = os.getenv("COINGLASS_API_KEY", "").strip()
+# ──────────────────────────────────────────────
+#  SMC SETTINGS
+# ──────────────────────────────────────────────
+OB_LOOKBACK      = 20   # candle lookback untuk deteksi OB
+FVG_MIN_SIZE_PCT = 0.05 # minimum FVG size 0.05% dari harga
 
-CG_HEADERS = {
-    "accept": "application/json",
-    "CG-API-KEY": COINGLASS_API_KEY,
+# ──────────────────────────────────────────────
+#  COINGLASS ENDPOINTS
+# ──────────────────────────────────────────────
+CG_BASE_URL = "https://open-api.coinglass.com"
+CG_HEADERS  = {
+    "accept":        "application/json",
+    "coinglassSecret": COINGLASS_API_KEY,
 }
 
-# ── Default UI selections ─────────────────────────────────────
-DEFAULT_SYMBOL   = "BTC"
-DEFAULT_PAIR     = "BTCUSDT"
-DEFAULT_TF       = "4h"
-DEFAULT_EXCHANGE = "Binance"
+# ──────────────────────────────────────────────
+#  BINANCE (price data, no API key needed)
+# ──────────────────────────────────────────────
+BINANCE_BASE_URL = "https://api.binance.com"
 
-# ── SMC detector tuning ───────────────────────────────────────
-OB_LOOKBACK      = int(os.getenv("OB_LOOKBACK", "10"))
-FVG_MIN_SIZE_PCT = float(os.getenv("FVG_MIN_SIZE_PCT", "0.05"))
+TIMEFRAME_MAP = {
+    "15m": "15m",
+    "1h":  "1h",
+    "4h":  "4h",
+    "1d":  "1d",
+}

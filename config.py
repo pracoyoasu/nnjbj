@@ -15,7 +15,7 @@ except Exception:
 
 
 # ── API endpoints ─────────────────────────────────────────────
-COINGLASS_BASE_URL = os.getenv(
+CG_BASE_URL = os.getenv(
     "COINGLASS_BASE_URL",
     "https://open-api-v4.coinglass.com",
 )
@@ -24,14 +24,16 @@ BINANCE_BASE_URL = os.getenv(
     "https://api.binance.com",
 )
 
-# ── API keys ──────────────────────────────────────────────────
+# ── API keys / headers ────────────────────────────────────────
 COINGLASS_API_KEY = os.getenv("COINGLASS_API_KEY", "").strip()
+
+CG_HEADERS = {
+    "accept": "application/json",
+    "CG-API-KEY": COINGLASS_API_KEY,
+}
 
 # ── Default UI selections ─────────────────────────────────────
 DEFAULT_SYMBOL   = "BTC"
 DEFAULT_PAIR     = "BTCUSDT"
 DEFAULT_TF       = "4h"
 DEFAULT_EXCHANGE = "Binance"
-
-# ── Networking ────────────────────────────────────────────────
-HTTP_TIMEOUT = float(os.getenv("HTTP_TIMEOUT", "10"))

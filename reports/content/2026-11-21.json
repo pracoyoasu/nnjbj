@@ -1,0 +1,75 @@
+{
+  "date": "2026-11-21",
+  "risk_regime": "RISK-OFF EKSTREM · USD KUAT · BTC DI LOW SEJAK SEP 2024",
+  "headline": "Minggu ini pasar global masuk mode deleveraging: Fed kembali ke jalur <b>kenaikan suku bunga</b> (FOMC 8–9 Des ~90% hike 25bp, peluang 50bp naik ke ~10%), saham AI/semikonduktor ambruk (Nasdaq-100 -5,6% Jumat, -15,7% sebulan), VIX melonjak ke ~36, dan BTC sempat menyapu ke ~55.1k (-56% dari ATH 126k) dengan likuidasi long di atas $1 miliar. Di sisi geopolitik, konflik Iran/Selat Hormuz tetap aktif dan KTT trilateral Trump–Xi–Putin di APEC Shenzhen tidak menghasilkan terobosan. Kombinasi ini = <b>dash for cash</b>: USD menguat, bahkan emas ikut dijual (-14,6% sebulan) — tanda klasik margin call lintas aset.",
+  "market": [
+    {"asset": "BTC/USD", "price": "59,393", "d1": "+0.9%", "w1": "-13.0%", "m1": "-29.3%", "note": "Low harian 55,122 (sweep likuiditas). November -25%, terburuk sejak Jun 2022."},
+    {"asset": "DXY", "price": "103.84", "d1": "-0.1%", "w1": "+0.6%", "m1": "+2.1%", "note": "Tertahan tepat di bawah 104; didorong ekspektasi hike Fed."},
+    {"asset": "S&amp;P 500", "price": "6,910", "d1": "-3.7%", "w1": "-9.3%", "m1": "-10.7%", "note": "Koreksi teknikal resmi (lebih dari 10% dalam sebulan)."},
+    {"asset": "Nasdaq-100", "price": "25,029", "d1": "-5.6%", "w1": "-11.5%", "m1": "-15.7%", "note": "Selloff AI/chip (NVDA, AMD) pasca-IPO Anthropic + hawkish Fed."},
+    {"asset": "VIX", "price": "35.89", "d1": "+26.2%", "w1": "+91%", "m1": "+108%", "note": "Zona stres; di atas 30 korelasi BTC-ekuitas biasanya naik."},
+    {"asset": "Emas (XAU)", "price": "3,538", "d1": "-2.4%", "w1": "-8.7%", "m1": "-14.6%", "note": "Safe haven ikut dijual = likuidasi paksa, bukan rotasi."},
+    {"asset": "US 10Y", "price": "4.95%", "d1": "-10bp", "w1": "-18bp", "m1": "-18bp", "note": "Yield turun sedikit: flight to quality di tenor panjang."},
+    {"asset": "US 2Y", "price": "4.65%", "d1": "-12bp", "w1": "-23bp", "m1": "-14bp", "note": "Front-end tetap tinggi = pasar yakin Fed hike."},
+    {"asset": "WTI / Brent", "price": "83.4 / ~92.6", "d1": "+1.2%", "w1": "-6.1%", "m1": "-14.7%", "note": "Risiko Hormuz diimbangi ekspektasi surplus pasokan."},
+    {"asset": "USD/JPY", "price": "158.56", "d1": "-0.7%", "w1": "-0.8%", "m1": "+0.3%", "note": "Dekat 160 = zona intervensi BoJ / risiko carry unwind."},
+    {"asset": "EUR/USD", "price": "1.0965", "d1": "0.0%", "w1": "-0.8%", "m1": "-2.4%", "note": "Euro tertekan risiko energi dan perang Ukraina."},
+    {"asset": "USD/IDR", "price": "18,158", "d1": "-0.4%", "w1": "-0.4%", "m1": "+1.2%", "note": "Rupiah lemah; tekanan EM saat USD kuat."}
+  ],
+  "geopolitics": [
+    {"title": "Iran – Selat Hormuz", "detail": "Perang maritim aktif: serangan tanker ~1 insiden/hari di November, laporan ranjau, AS menyerang situs rudal IRGC di Pulau Qeshm (17 Nov). Arus kapal masih jauh di bawah normal. Beberapa analisis memperkirakan AS–Israel melanjutkan serangan udara ke Iran pasca-midterm. Brent tetap ~90–93 karena surplus pasokan.", "impact": "Eskalasi = minyak naik, inflasi naik, Fed makin hawkish -> USD naik, BTC turun (BTC diperdagangkan sebagai aset risiko, bukan safe haven)."},
+    {"title": "KTT Trump–Xi–Putin (APEC Shenzhen, 19 Nov)", "detail": "Deklarasi perdamaian 4 poin, komitmen menaikkan produksi minyak, pernyataan 'tidak ada pemenang dalam perang nuklir'. TIDAK ada kesepakatan Ukraina maupun New START; Iran tidak disebut. Putin dinilai pemenang terbesar.", "impact": "Netral-negatif: tidak ada katalis de-eskalasi. Komitmen produksi minyak sedikit meredam risiko inflasi energi."},
+    {"title": "Rusia – Ukraina", "detail": "Ukraina menyerang terminal ekspor minyak Ust-Luga dengan gelombang ~627 drone (10–11 Nov) dan jembatan di Krimea; Putin menolak negosiasi langsung. Pembicaraan AS–Rusia–Ukraina di Abu Dhabi tanpa hasil. Swiss menerapkan paket sanksi EU ke-21.", "impact": "Perang infrastruktur energi -> risiko gas Eropa -> EUR melemah -> DXY terdorong naik."},
+    {"title": "China – Taiwan", "detail": "Ada laporan latihan blokade Taiwan (sumber tunggal, BELUM terkonfirmasi kantor berita).", "impact": "Tail risk terbesar untuk rantai pasok semikonduktor; bila nyata -> Nasdaq crash, USD dan JPY naik, BTC dijual."},
+    {"title": "Politik AS", "detail": "Pasca-midterm 3 Nov, partai pemerintah kalah karena isu harga; Gedung Putih tetap mempertahankan tarif.", "impact": "Tarif bertahan = inflasi barang lengket -> mendukung Fed hawkish dan USD."}
+  ],
+  "geoeconomics": [
+    {"title": "Fed: siklus kenaikan", "detail": "Minutes Oktober: hampir semua anggota mendukung kenaikan lanjutan; beberapa membuka opsi lebih dari 25bp. Pasca komentar Waller, peluang 50bp naik dari ~3% ke ~10%. Menkeu Bessent meminta Fed tidak menaikkan besar.", "impact": "Driver utama. Real yield naik -> likuiditas global mengetat -> negatif BTC, positif USD."},
+    {"title": "Inflasi AS", "detail": "Inflasi 3,7% (Sep). Bowman: tarif, energi, dan AI masing-masing ~1/4 dari kelebihan core PCE di atas target. Pass-through tarif ke konsumen ~26% (studi NY Fed).", "impact": "Inflasi multi-sumber membuat Fed sulit pivot dalam waktu dekat."},
+    {"title": "Gelembung AI / Tech", "detail": "Nvidia dan AMD anjlok tajam, isu kepemimpinan di Nvidia, aksi jual tech pasca-IPO Anthropic. Valuasi tinggi paling sensitif terhadap kenaikan suku bunga.", "impact": "Korelasi BTC–Nasdaq tinggi saat stres; deleveraging tech menular ke crypto."},
+    {"title": "Arus dana crypto", "detail": "Outflow ETF BTC rekor; lebih dari $1 miliar posisi long terlikuidasi saat BTC tembus di bawah 60k. Futures sudah mem-price-in hike Desember.", "impact": "Spiral: outflow -> harga turun -> likuidasi -> outflow. Perlu absorpsi spot untuk berhenti."},
+    {"title": "Energi", "detail": "OPEC+ rapat 29 Nov. Goldman memproyeksikan Brent rata-rata $88 di 2027 (surplus). Stok gas Eropa dilaporkan menyusut (sumber tunggal).", "impact": "Keputusan OPEC+ + Hormuz menentukan jalur inflasi dan nada Fed bulan Desember."}
+  ],
+  "worst_case": [
+    {"scenario": "A. Fed 'shock therapy' 50bp", "prob": "~20%", "trigger": "Data inflasi/PCE panas + Fed hike 50bp pada 9 Des dengan guidance lanjut hike di 2027.", "usd": "DXY tembus 104 lalu 105–106. USD/JPY uji 160+ -> risiko intervensi BoJ.", "btc": "Hilangnya low 55.1k -> sweep ke demand HTF ~49–52k (range 2024). Struktur D1 tetap bearish."},
+    {"scenario": "B. Hormuz tertutup penuh + serangan AS–Israel ke Iran", "prob": "~25%", "trigger": "Serangan udara skala besar ke Iran; Iran membalas ke infrastruktur energi Teluk; Brent di atas $110.", "usd": "USD naik sebagai safe haven + importir energi (EUR, JPY, IDR) melemah.", "btc": "Jual awal mengikuti ekuitas (analog 2022): wick ke 50–52k. Rebound hanya jika pasar mulai price-in Fed tak bisa hike lagi."},
+    {"scenario": "C. Carry unwind yen + credit event AI", "prob": "~15%", "trigger": "BoJ intervensi/hike saat USD/JPY 160; spread kredit melebar (private credit / capex AI).", "usd": "DXY campur: USD naik vs EM, turun vs JPY. Volatilitas FX ekstrem.", "btc": "Likuidasi lintas aset (analog Agu 2024): flash crash 15–20% intraday, potensi ke 45–48k; level TradingView 38.9k jadi target ekstrem."},
+    {"scenario": "D. Krisis Taiwan (tail risk)", "prob": "di bawah 5%", "trigger": "Latihan blokade berubah jadi karantina nyata terhadap Taiwan.", "usd": "USD dan JPY melonjak, CNH dan EM jatuh.", "btc": "Crash awal bersama Nasdaq; narasi 'aset di luar sistem' baru muncul belakangan."},
+    {"scenario": "Invalidasi worst case", "prob": "~35%", "trigger": "Fed 25bp + nada lebih lunak, de-eskalasi Hormuz, DXY ditolak di 104, outflow ETF berhenti.", "usd": "DXY kembali ke 102–103.", "btc": "Relief rally ke supply terdekat (bearish FVG 59.6–61.4k, lalu FVG/OB 63.1–63.9k). Masih dianggap pullback dalam struktur bearish sampai ada CHoCH D1."}
+  ],
+  "btc_usd_link": [
+    "<b>Rezim saat ini: korelasi negatif BTC–USD kuat.</b> Saat Fed hawkish dan VIX di atas 30, BTC berperilaku seperti saham tech beta tinggi, bukan 'emas digital'. Setiap kenaikan DXY/real yield menarik likuiditas dari aset risiko; outflow ETF memperkuat efeknya.",
+    "<b>Tiga pemicu yang harus dipantau:</b> (1) DXY di 104 — breakout terkonfirmasi = bahan bakar worst case A/B; (2) USD/JPY 160 — zona intervensi BoJ, sumber volatilitas carry unwind; (3) Brent 100 — di atas itu risiko inflasi energi kembali memaksa Fed lebih agresif.",
+    "<b>Tanda dasar (bottom) yang dicari:</b> outflow ETF melambat, funding rate negatif lama, VIX berbalik turun dari puncak, dan DXY gagal bertahan di atas 104. Tanpa itu, setiap rally BTC lebih mungkin jadi retest ke zona supply untuk lanjut turun."
+  ],
+  "smc_note": [
+    "<b>Bacaan struktur:</b> D1 masih rangkaian Lower High – Lower Low sejak puncak ~87.4k (Sep). Sweep ke 55.1k mengambil likuiditas di bawah low Juli (~57.8k). Selama belum ada CHoCH D1 (close di atas lower high terakhir), bias tetap <b>bearish</b>; rally ke bearish FVG 59.6–61.4k dan OB 63.4–63.9k (D1) adalah area premium untuk mencari short dengan konfirmasi LTF.",
+    "<b>Skenario long kontra-tren</b> hanya valid jika H4 membentuk CHoCH bullish dan menyisakan bullish FVG di atas 55.1k; invalidasi jelas di bawah low sweep. Worst case A/B di atas menjadi alasan memperkecil ukuran posisi minggu ini."
+  ],
+  "calendar": [
+    {"date": "Minggu depan", "event": "Data PCE / klaim pengangguran AS (cek tanggal rilis resmi)", "why": "Input terakhir sebelum FOMC; data panas = peluang 50bp naik."},
+    {"date": "26–27 Nov", "event": "Thanksgiving AS (pasar tutup / setengah hari)", "why": "Likuiditas tipis -> wick ekstrem dan stop hunt di BTC lebih mungkin."},
+    {"date": "29 Nov", "event": "Rapat OPEC+", "why": "Menentukan apakah komitmen 'naikkan produksi' di APEC terealisasi."},
+    {"date": "Awal Des", "event": "NFP (laporan tenaga kerja AS)", "why": "Pasar tenaga kerja kuat = konfirmasi hike."},
+    {"date": "8–9 Des", "event": "FOMC", "why": "Event terbesar bulan ini: 25bp (base case) vs 50bp (worst case A)."},
+    {"date": "Berjalan", "event": "Hormuz, Ukraina, Taiwan", "why": "Headline risk 24/7 — BTC adalah pasar pertama yang bereaksi saat akhir pekan."}
+  ],
+  "sources": [
+    "Reuters via Brave New Coin — bravenewcoin.com/insights/crypto-news-today-bitcoin-price-nears-55k-as-ethereum-plunges-10-and-xrp-tests-0-87-support",
+    "aroundprague.cz/en/news/us/why-is-bitcoin-falling-what-the-4-year-cycle-says-about-the-bottom",
+    "cryptonews.net/news/bitcoin/33786427",
+    "fxstreet.com/news/us-dollar-index-dxy-hesitates-below-10400-as-ai-jitters-offset-fed-hiking-bets-202611201236",
+    "federalreserve.gov/newsevents/speech/bowman20261110a.htm",
+    "cnbc.com/2026/11/10/trump-tariffs-midterms-gary-cohn-inflation.html",
+    "finance.biggo.com/news/2a53d043-5722-4c6b-9f18-9873a48e3841 (Waller, peluang 50bp)",
+    "xtb.com — Fed Minutes: virtually everyone in favor of further rate hikes",
+    "fxstreet.com/news/dow-jones-futures-slip-amid-post-anthropic-ipo-tech-sell-off-hawkish-fed-outlook-202611200651",
+    "rferl.org/a/trump-xi-putin-summit-four-key-takeaways/33902100.html",
+    "cbsnews.com/news/trump-xi-putin-china-apec-summit/",
+    "invezz.com/news/2026/11/20/oil-price-today-brent-pares-losses-hormuz-tensions/",
+    "oilprice.com — Iran Steps Up Hormuz Tanker Attacks as Oil Prices Slide",
+    "martyau79.substack.com/p/18nov2026-geopolitical-intelligence (newsletter)",
+    "geopoliticsexplained.substack.com/p/this-week-in-geopolitics-15th-november (newsletter)",
+    "Data harga: TradingView (snapshot 21 Nov 2026), OHLCV SMC: Coinbase BTC-USD"
+  ]
+}

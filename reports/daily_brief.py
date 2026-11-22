@@ -140,6 +140,15 @@ def build(content_path: Path) -> Path:
     d1 = load_ohlcv("BTCUSDT", "1D")
     h4 = load_ohlcv("BTCUSDT", "4h")
     lv_d1, lv_h4 = smc_levels(d1.tail(120)), smc_levels(h4)
+    # Zona dari TradingView (script "SMC Export - LuxAlgo OB FVG + Structure") menggantikan detector lokal
+    cz = c.get("chart_zones", {})
+    for tf, lv in (("1D", lv_d1), ("4h", lv_h4)):
+        if tf in cz:
+            px = lv["price"]
+            zs = [tuple(z) for z in cz[tf]["zones"]]  # [type, kind, bottom, top]
+            lv["above"] = sorted([z for z in zs if z[2] > px], key=lambda z: z[2])[:3]
+            lv["below"] = sorted([z for z in zs if z[3] < px], key=lambda z: -z[3])[:3]
+            lv["structure"] = {"structure": cz[tf].get("structure", "-"), "bias": cz[tf].get("bias", "-")}
 
     doc = SimpleDocTemplate(str(out), pagesize=A4, leftMargin=14 * mm, rightMargin=14 * mm,
                             topMargin=12 * mm, bottomMargin=12 * mm,
@@ -212,7 +221,7 @@ def build(content_path: Path) -> Path:
             candle_chart(df, lv, f"BTCUSDT {name} · {lbl}"),
             table(zone_rows(lv), [W * .2, W * .25, W * .35, W * .2]), Spacer(1, 6)]))
     st.append(Paragraph(
-        "Zona dari utils/smc_detector.py (OHLCV TradingView BINANCE:BTCUSDT). Validitas OB/FVG detector hanya dicek terhadap harga "
+        "Zona OB/FVG: indikator TradingView \"SMC Export - LuxAlgo OB FVG + Structure\" (logika Order Block Detector &amp; Fair Value Gap [LuxAlgo]) bila tersedia, selain itu utils/smc_detector.py. Validitas OB/FVG detector hanya dicek terhadap harga "
         "terakhir, bukan riwayat sentuhan — konfirmasi manual di chart sebelum entry.", S["small"]))
     st += [Paragraph(p, S["body"]) for p in c["smc_note"]]
 

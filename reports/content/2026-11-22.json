@@ -1,6 +1,6 @@
 {
  "date": "2026-11-22",
- "data_note": "Data D1 crypto per close 22 Nov 00:00 UTC; DXY/USDIDR/XAU per close Jumat 20 Nov",
+ "data_note": "Data D1 crypto per close 22 Nov 00:00 UTC; SMC BTC/ETH/HYPE dari indikator TradingView (logika LuxAlgo), dihitung ±06:30 UTC; DXY/USDIDR/XAU per close Jumat 20 Nov",
  "risk_regime": "RISK-OFF · EXTREME FEAR (F&amp;G 7) · USD KUAT DI BAWAH 104 · BTC RELIEF DARI SWEEP 55.1K",
  "headline": "<b>Close D1 BTC (21 Nov): bullish rejection.</b> Candle membuka 58,952, menyapu likuiditas sampai <b>55,130</b> (di bawah low 20 Nov 57,778), lalu ditutup <b>60,216</b> — wick bawah panjang, tanda absorpsi setelah likuidasi long. Namun hari ini harga sudah kembali di bawah daily open (±59,000, -2%), dan struktur D1/H4 tetap Lower High–Lower Low. Sentimen di titik ekstrem: <b>Fear &amp; Greed 7</b>, OI global turun 9% dalam 24 jam, AUM ETF BTC terus menyusut. Makro tidak berubah: Fed condong <b>menaikkan</b> suku bunga 8–9 Des, DXY mengetuk 104, emas ikut dilikuidasi (-14,5% sebulan), rupiah di 18,158. Event terbesar minggu ini: <b>Core PCE + GDP Q3 (25 Nov, 20:30 WIB)</b> menjelang libur Thanksgiving yang tipis likuiditas.",
  "market": [
@@ -21,12 +21,12 @@
    "note": "Sweep 1,538 lalu close 1,686. Spot CVD masih turun (penjual spot aktif)."
   },
   {
-   "asset": "HYPEUSDT",
+   "asset": "HYPEUSDT.P",
    "price": "60.17",
    "d1": "-2.0%",
    "w1": "-6.5%",
    "m1": "-22.3%",
-   "note": "Low 55.80 (21 Nov). Buyback HYPE berjalan (avg 72.31 pada 12 Nov) tapi kalah oleh tekanan jual."
+   "note": "Harga/perf dari spot BINANCE:HYPEUSDT; level SMC dari perp .P (watchlist 'trade on'). Low 55.80 (21 Nov). Buyback HYPE berjalan (avg 72.31 pada 12 Nov) tapi kalah oleh tekanan jual."
   },
   {
    "asset": "LIGHTERUSDT",
@@ -238,33 +238,33 @@
  ],
  "btc_usd_link": [
   "<b>Rezim: korelasi negatif BTC–USD kuat.</b> DXY naik dari 101.5 ke 103.84 dalam 5 pekan bersamaan BTC turun dari ~80k ke 59k. Selama Fed condong hike dan VIX tinggi, BTC berperilaku sebagai aset tech beta tinggi. Emas yang ikut turun 14.5% menegaskan ini fase <b>dash for cash</b>, bukan rotasi ke safe haven.",
-  "<b>Perubahan dari laporan kemarin:</b> (1) Close D1 BTC berupa rejection dari 55.1k — pertama kalinya pembeli terlihat agresif; (2) funding BTC berbalik sedikit positif (+0.0066%) = sebagian long masuk kembali, menambah bahan bakar bila 55.1k jebol; (3) F&amp;G 8 → 7; (4) AUM ETF BTC turun lagi dari $84.5B ke $83.9B.",
+  "<b>Perubahan dari laporan kemarin:</b> (1) Close D1 BTC berupa rejection dari 55.1k, tapi M30 sudah kembali CHoCH↓ (59,988) sehingga BTC/ETH/HYPE kini selaras bearish di tiga timeframe; (2) funding BTC berbalik sedikit positif (+0.0066%) = sebagian long masuk kembali, menambah bahan bakar bila 55.1k jebol; (3) F&amp;G 8 → 7; (4) AUM ETF BTC turun lagi dari $84.5B ke $83.9B.",
   "<b>Tiga pemicu minggu ini:</b> DXY 104 (breakout = worst case A/B), Core PCE 25 Nov 20:30 WIB, dan USDIDR 18,270 (rupiah sebagai barometer tekanan EM). Untuk BTC: reclaim 61.4k vs hilangnya 55.1k menentukan arah 2–6 minggu."
  ],
  "smc_table": [
   {
    "ticker": "BTCUSDT",
-   "d1": "BEARISH (BOS↓). Close 21 Nov: hammer, sweep 55,130",
-   "h4": "BEARISH* (LL 55,130, LH 60,996)",
-   "m30": "CHoCH↑ gagal lanjut; LH sejak 60,568, kini di bawah daily open",
-   "align": "D1↓ H4↓ M30 pullback",
-   "zones": "Atas: FVG D1 60,996–61,428 · FVG H4 60,025–61,552 · OB D1 64,883–65,447. Bawah: FVG M30 58,596–58,803 · low 55,130"
+   "d1": "BEARISH · BOS↓ 79,800 (23 Okt). Close 21 Nov: hammer, sweep 55,130 (TradingView/LuxAlgo)",
+   "h4": "BEARISH · BOS↓ 62,063 (20 Nov). Swing 65,696 / 55,130",
+   "m30": "BEARISH · CHoCH↓ 59,988 (22 Nov 02:00 UTC)",
+   "align": "D1↓ H4↓ M30↓ (selaras bearish)",
+   "zones": "Atas: Bear FVG M30 59,082–59,244 · Bear OB M30 59,632–59,848 · Bear FVG H4 60,025–61,552 · Bear FVG D1 60,996–61,428 · Bear OB D1 65,883–68,446. Bawah: Bull FVG H4 58,637–59,783 (harga di dalam) · Bull FVG M30 58,596–58,803 · Bull OB H4 55,130–56,901 · Bull OB D1 52,550–54,779"
   },
   {
    "ticker": "ETHUSDT",
-   "d1": "BEARISH (BOS↓). Sweep 1,538, close 1,686",
-   "h4": "BEARISH (BOS↓, LL 1,538)",
-   "m30": "CHoCH↑ (WATCH LONG), tertahan OB 1,662–1,667",
-   "align": "D1↓ H4↓ M30↑ (pullback)",
-   "zones": "Atas: OB M30 1,662–1,667 · FVG H4 1,662–1,743 · FVG D1 1,717–1,736. Bawah: FVG M30 1,644–1,650 · low 1,538"
+   "d1": "BEARISH · BOS↓ 2,174 (7 Nov). Sweep 1,538, close 1,686 (TradingView/LuxAlgo)",
+   "h4": "BEARISH · BOS↓ 1,733 (21 Nov)",
+   "m30": "BEARISH · CHoCH↓ 1,675",
+   "align": "D1↓ H4↓ M30↓ (selaras bearish)",
+   "zones": "Atas: Bear FVG M30 1,660–1,661 · Bear OB M30 1,674–1,681 · Bear FVG H4 1,662–1,743 · Bear FVG D1 1,717–1,736 · Bear OB D1 1,833–1,936. Bawah: Bull FVG M30 1,644–1,650 · Bull OB H4 1,538–1,598 · Bull FVG D1 1,439–1,448"
   },
   {
-   "ticker": "HYPEUSDT",
-   "d1": "CHoCH↓ (bearish). Close 61.38",
-   "h4": "BEARISH (BOS↓, LL 55.80)",
-   "m30": "CHoCH↑ memudar, harga di bawah 60.5",
-   "align": "D1↓ H4↓ M30 netral",
-   "zones": "Atas: OB H4 60.71–61.77 · FVG D1 61.90–65.95. Bawah: FVG H4/M30 59.14–59.31 · low 55.80"
+   "ticker": "HYPEUSDT.P",
+   "d1": "BEARISH · CHoCH↓ 74.41 (11 Nov). Close 61.35 (TradingView/LuxAlgo)",
+   "h4": "BEARISH · CHoCH↓ 65.06 (20 Nov). Swing 70.21 / 55.80",
+   "m30": "BEARISH · CHoCH↓ 60.90",
+   "align": "D1↓ H4↓ M30↓ (selaras bearish)",
+   "zones": "Atas: Bear FVG H4 60.52–60.90 · Bear FVG D1 61.87–65.91 · Bear FVG H4 62.65–63.82 · Bear OB M30 63.55–64.01 · Bear OB D1 65.97–71.92. Bawah: Bull FVG H4 59.71–60.24 · Bull FVG M30 59.11–59.29 · Bull FVG D1 58.03–58.20 · Bull OB H4 55.80–57.46"
   },
   {
    "ticker": "LIGHTERUSDT",
@@ -300,8 +300,8 @@
   }
  ],
  "smc_note": [
-  "<b>BTC:</b> close D1 berupa hammer setelah sweep 55.1k adalah sinyal pertama absorpsi, tetapi belum mengubah struktur — CHoCH D1 butuh close di atas lower high terakhir. Area premium untuk mencari short dengan konfirmasi LTF: FVG D1 60,996–61,428 (bertumpuk dengan FVG H4 sampai 61,552). Selama M30 membentuk lower high di bawah daily open 60,216, bias intraday tetap turun menuju FVG M30 58.6–58.8k dan cluster likuidasi 57.1k.",
-  "<b>Skenario long kontra-tren</b> hanya valid bila H4 membuat CHoCH bullish (close H4 di atas 60,996) dan meninggalkan bullish FVG di atas 55.1k; invalidasi di bawah 55,130. <b>ETH/HYPE/LIGHTER</b> mengikuti pola yang sama dengan beta lebih tinggi; XAUUSD satu-satunya yang selaras bearish di tiga timeframe. DXY bullish di D1/H4 — konsisten dengan tekanan ke crypto dan rupiah."
+  "<b>BTC (TradingView/LuxAlgo):</b> ketiga timeframe kini <b>selaras bearish</b> — M30 mencetak CHoCH↓ di 59,988 setelah relief dari sweep 55,130, H4 masih BOS↓ (62,063), D1 BOS↓. Harga sedang berada di dalam Bull FVG H4 58,637–59,783: close H4 di bawah 58,637 membuka jalan ke Bull FVG/OB H4 55.1–56.9k (area sweep). Supply terdekat untuk mencari short dengan konfirmasi LTF: Bear OB M30 59,632–59,848, lalu tumpukan Bear FVG H4 60,025–61,552 &amp; Bear FVG D1 60,996–61,428.",
+  "<b>Skenario long kontra-tren</b> baru valid bila M30/H4 membuat CHoCH↑ (close H4 di atas 61,552) sambil bertahan di atas 55,130. <b>ETH</b> dan <b>HYPE.P</b> sama-sama selaras bearish di D1/H4/M30 (ETH: supply 1,662–1,743 H4, demand Bull OB H4 1,538–1,598; HYPE: supply 60.52–60.90 &amp; 61.87–65.91, demand Bull OB H4 55.80–57.46). XAUUSD juga selaras bearish; DXY bullish D1/H4 — konsisten dengan tekanan ke crypto dan rupiah."
  ],
  "calendar": [
   {
@@ -336,6 +336,7 @@
   }
  ],
  "sources": [
+  "TradingView — indikator 'SMC Export - LuxAlgo OB FVG + Structure' (logika Order Block Detector &amp; Fair Value Gap [LuxAlgo], © LuxAlgo CC BY-NC-SA 4.0) untuk BINANCE:BTCUSDT, BINANCE:ETHUSDT, BINANCE:HYPEUSDT.P · D1/H4/M30",
   "TradingView MCP — harga/OHLCV: BINANCE:BTCUSDT, BINANCE:ETHUSDT, BINANCE:HYPEUSDT, BINGX:LIGHTERUSDT.P, TVC:DXY, FX_IDC:USDIDR, OANDA:XAUUSD (snapshot 22 Nov 2026 ±05:30 UTC)",
   "TradingView Economic Calendar — US high-impact 22–29 Nov 2026",
   "TradingView News — Crypto Briefing: 'Bitcoin heads for longest weekly losing streak since 2022 as holders chase AI stocks'",
@@ -425,6 +426,84 @@
      "FVG",
      68446.21,
      71113.06
+    ]
+   ]
+  },
+  "4h": {
+   "structure": "BOS BEARISH (break 62,063, 20 Nov)",
+   "bias": "BEARISH",
+   "zones": [
+    [
+     "bullish",
+     "OB",
+     55130,
+     56901.03
+    ],
+    [
+     "bullish",
+     "OB",
+     49000,
+     51788.36
+    ],
+    [
+     "bullish",
+     "OB",
+     47454.37,
+     47812.19
+    ],
+    [
+     "bearish",
+     "OB",
+     70020.95,
+     71514.01
+    ],
+    [
+     "bearish",
+     "OB",
+     73854.91,
+     74843.82
+    ],
+    [
+     "bearish",
+     "OB",
+     74726.57,
+     75943.13
+    ],
+    [
+     "bullish",
+     "FVG",
+     58637.49,
+     59783.45
+    ],
+    [
+     "bullish",
+     "FVG",
+     55799,
+     56810
+    ],
+    [
+     "bullish",
+     "FVG",
+     54531.1,
+     54688.69
+    ],
+    [
+     "bearish",
+     "FVG",
+     60025.24,
+     61552
+    ],
+    [
+     "bearish",
+     "FVG",
+     62467.25,
+     62780.07
+    ],
+    [
+     "bearish",
+     "FVG",
+     63408.62,
+     63565.52
     ]
    ]
   }

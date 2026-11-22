@@ -210,7 +210,8 @@ def build(content_path: Path) -> Path:
         rows = [["Ticker", "D1 (bias)", "H4", "M30 (eksekusi)", "Alignment", "OB/FVG terdekat atas · bawah"]] + [
             [r["ticker"], r["d1"], r["h4"], r["m30"], r["align"], r["zones"]] for r in c["smc_table"]]
         st.append(table(rows, [W * x for x in (.10, .17, .16, .17, .14, .26)]))
-        st.append(Paragraph("Struktur &amp; zona dihitung utils/smc_detector.py dari OHLCV TradingView (bar yang belum close dibuang). "
+        st.append(Paragraph("BTCUSDT, ETHUSDT, HYPEUSDT.P: OB/FVG/struktur dari indikator TradingView \"SMC Export - LuxAlgo OB FVG + Structure\" (logika Order Block Detector &amp; Fair Value Gap [LuxAlgo]). "
+                            "Ticker lain: utils/smc_detector.py dari OHLCV TradingView (bar yang belum close dibuang). "
                             "Bila detector kekurangan swing atau tertinggal (lag 5 bar), bacaan manual ditandai *.", S["small"]))
     st.append(Paragraph("6b. Chart SMC BTC (D1 &amp; H4)", S["h1"]))
     for name, df, lv in (("D1", d1.tail(90), lv_d1), ("H4", h4.tail(90), lv_h4)):

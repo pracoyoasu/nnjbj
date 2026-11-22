@@ -13,7 +13,6 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 import pandas as pd
-import requests
 from reportlab.graphics.shapes import Drawing, Line, Rect, String
 from reportlab.lib import colors
 from reportlab.lib.enums import TA_CENTER
@@ -50,19 +49,19 @@ S = {
 
 
 # ── Data ─────────────────────────────────────────────────────────
-def fetch_ohlcv(granularity: int) -> pd.DataFrame:
-    """Coinbase candles: [time, low, high, open, close, volume], newest first, max 300."""
-    r = requests.get("https://api.exchange.coinbase.com/products/BTC-USD/candles",
-                     params={"granularity": granularity}, timeout=20)
-    r.raise_for_status()
-    df = pd.DataFrame(r.json(), columns=["ts", "low", "high", "open", "close", "volume"]).sort_values("ts")
-    df["time"] = pd.to_datetime(df["ts"], unit="s", utc=True)
+TF_SEC = {"1D": 86400, "4h": 14400, "30m": 1800}
+
+
+def load_ohlcv(ticker: str, tf: str, drop_forming: bool = True) -> pd.DataFrame:
+    """OHLCV dari reports/ohlcv/<TICKER>_<tf>.json (ditulis agent dari TradingView MCP, format kolom t/o/h/l/c).
+    Bar yang belum close dibuang supaya struktur/OB/FVG hanya dari candle final."""
+    d = json.loads((ROOT / "reports" / "ohlcv" / f"{ticker}_{tf}.json").read_text())
+    df = pd.DataFrame({"t": d["t"], "open": d["o"], "high": d["h"], "low": d["l"], "close": d["c"]})
+    if drop_forming:
+        df = df[df["t"] + TF_SEC[tf] <= datetime.now(timezone.utc).timestamp()]
+    df["time"] = pd.to_datetime(df["t"], unit="s", utc=True)
+    df["volume"] = 0.0
     return df[["time", "open", "high", "low", "close", "volume"]].reset_index(drop=True)
-
-
-def to_4h(df_1h: pd.DataFrame) -> pd.DataFrame:
-    agg = {"open": "first", "high": "max", "low": "min", "close": "last", "volume": "sum"}
-    return df_1h.set_index("time").resample("4h").agg(agg).dropna().reset_index()
 
 
 def smc_levels(df: pd.DataFrame, n: int = 3) -> dict:
@@ -138,8 +137,8 @@ def build(content_path: Path) -> Path:
     out = ROOT / "reports" / "pdf" / f"{c['date']}.pdf"
     out.parent.mkdir(parents=True, exist_ok=True)
 
-    d1 = fetch_ohlcv(86400)
-    h4 = to_4h(fetch_ohlcv(3600))
+    d1 = load_ohlcv("BTCUSDT", "1D")
+    h4 = load_ohlcv("BTCUSDT", "4h")
     lv_d1, lv_h4 = smc_levels(d1.tail(120)), smc_levels(h4)
 
     doc = SimpleDocTemplate(str(out), pagesize=A4, leftMargin=14 * mm, rightMargin=14 * mm,
@@ -149,7 +148,7 @@ def build(content_path: Path) -> Path:
     st = []
     gen = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     st += [Paragraph(f"GEO-MACRO DAILY BRIEF  ·  {c['date']}", S["title"]),
-           Paragraph(f"Geopolitik & Geo-ekonomi global → dampak ke BTC & USD · fokus worst case · dibuat {gen}", S["sub"]),
+           Paragraph(f"Geopolitik &amp; geo-ekonomi global → dampak ke watchlist (BTC, ETH, HYPE, LIGHTER, DXY, USDIDR, XAUUSD) · fokus worst case · dibuat {gen} · {c.get('data_note', '')}", S["sub"]),
            Spacer(1, 6)]
 
     # Risk banner
@@ -163,29 +162,57 @@ def build(content_path: Path) -> Path:
         [m["asset"], m["price"], m["d1"], m["w1"], m["m1"], m.get("note", "")] for m in c["market"]]
     st.append(table(rows, [W * x for x in (.13, .13, .09, .09, .09, .47)]))
 
+    if "sentiment" in c:
+        se = c["sentiment"]
+        st.append(Paragraph("1b. Sentimen Market Crypto (CoinMarketCap)", S["h1"]))
+        fg = se["fear_greed"]
+        col = RED if fg["index"] < 25 else (GREEN if fg["index"] > 60 else GREY)
+        big = ParagraphStyle("big", parent=S["box"], fontSize=26, leading=32)
+        box = Table([[[Paragraph("FEAR &amp; GREED", S["box"]), Paragraph(str(fg["index"]), big), Paragraph(fg["label"], S["box"])],
+                      table([["Metrik", "Nilai"]] + [[k, v] for k, v in se["metrics"]], [W * .30, W * .40])]],
+                    colWidths=[W * .28, W * .72])
+        box.setStyle(TableStyle([("BACKGROUND", (0, 0), (0, 0), col), ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
+                                 ("TOPPADDING", (0, 0), (0, 0), 8), ("BOTTOMPADDING", (0, 0), (0, 0), 8)]))
+        st += [box, Spacer(1, 3), Paragraph(se["trend"], S["small"]), Paragraph(se["read"], S["body"])]
+
+    if "derivatives" in c:
+        st.append(Paragraph("1c. Derivatif per Ticker (CoinMarketCap · perp 4h, 7 hari)", S["h1"]))
+        rows = [["Ticker", "Funding", "Regime", "OI 7d", "OI/MCap", "Liq heatmap atas / bawah", "Bacaan"]] + [
+            [d["ticker"], d["funding"], d["regime"], d["oi7d"], d["oi_mcap"], d["liq"], d["read"]] for d in c["derivatives"]]
+        st.append(table(rows, [W * x for x in (.11, .11, .10, .08, .09, .19, .32)]))
+
     for key, label in (("geopolitics", "2. Geopolitik"), ("geoeconomics", "3. Geo-ekonomi")):
         st.append(Paragraph(label, S["h1"]))
-        rows = [["Isu", "Perkembangan terbaru", "Dampak BTC / USD"]] + [
+        rows = [["Isu", "Perkembangan terbaru", "Dampak ke watchlist"]] + [
             [f"<b>{n['title']}</b>", n["detail"], n["impact"]] for n in c[key]]
         st.append(table(rows, [W * .18, W * .52, W * .30]))
 
     st.append(Paragraph("4. Skenario Worst Case (2–6 minggu)", S["h1"]))
     st.append(Paragraph("Probabilitas = estimasi subjektif analis, bukan model kuantitatif.", S["small"]))
-    rows = [["Skenario", "Prob.", "Pemicu", "USD (DXY)", "BTC"]] + [
-        [f"<b>{w['scenario']}</b>", w["prob"], w["trigger"], w["usd"], w["btc"]] for w in c["worst_case"]]
-    st.append(table(rows, [W * x for x in (.17, .08, .29, .21, .25)], header_bg=RED))
+    rows = [["Skenario", "Prob.", "Pemicu", "USD (DXY · USDIDR)", "BTC / ETH", "HYPE / LIGHTER · XAU"]] + [
+        [f"<b>{w['scenario']}</b>", w["prob"], w["trigger"], w["usd"], w["btc"], w.get("alts", "")] for w in c["worst_case"]]
+    st.append(table(rows, [W * x for x in (.14, .07, .22, .18, .19, .20)], header_bg=RED))
 
     st.append(Paragraph("5. Benang Merah: BTC vs USD", S["h1"]))
     st += [Paragraph(p, S["body"]) for p in c["btc_usd_link"]]
 
-    st.append(Paragraph("6. Peta SMC BTC (Market Structure · Orderblock · FVG)", S["h1"]))
+    if "smc_table" in c:
+        st.append(Paragraph("6. Peta SMC Watchlist · D1 / H4 / M30", S["h1"]))
+        rows = [["Ticker", "D1 (bias)", "H4", "M30 (eksekusi)", "Alignment", "OB/FVG terdekat atas · bawah"]] + [
+            [r["ticker"], r["d1"], r["h4"], r["m30"], r["align"], r["zones"]] for r in c["smc_table"]]
+        st.append(table(rows, [W * x for x in (.10, .17, .16, .17, .14, .26)]))
+        st.append(Paragraph("Struktur &amp; zona dihitung utils/smc_detector.py dari OHLCV TradingView (bar yang belum close dibuang). "
+                            "Bila detector kekurangan swing atau tertinggal (lag 5 bar), bacaan manual ditandai *.", S["small"]))
+    st.append(Paragraph("6b. Chart SMC BTC (D1 &amp; H4)", S["h1"]))
     for name, df, lv in (("D1", d1.tail(90), lv_d1), ("H4", h4.tail(90), lv_h4)):
         s = lv["structure"]
+        lbl = (f"{s['structure']} · bias {s['bias']}" if s["structure"] != "INSUFFICIENT DATA"
+               else "swing belum cukup untuk detector — lihat tabel SMC")
         st.append(KeepTogether([
-            candle_chart(df, lv, f"BTC-USD {name} · {s['structure']} · bias {s['bias']}"),
+            candle_chart(df, lv, f"BTCUSDT {name} · {lbl}"),
             table(zone_rows(lv), [W * .2, W * .25, W * .35, W * .2]), Spacer(1, 6)]))
     st.append(Paragraph(
-        "Zona dari utils/smc_detector.py (data Coinbase BTC-USD). Validitas OB/FVG detector hanya dicek terhadap harga "
+        "Zona dari utils/smc_detector.py (OHLCV TradingView BINANCE:BTCUSDT). Validitas OB/FVG detector hanya dicek terhadap harga "
         "terakhir, bukan riwayat sentuhan — konfirmasi manual di chart sebelum entry.", S["small"]))
     st += [Paragraph(p, S["body"]) for p in c["smc_note"]]
 

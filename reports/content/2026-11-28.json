@@ -1,0 +1,123 @@
+{
+ "date": "2026-11-28",
+ "data_note": "Data D1 crypto per close 28 Nov 00:00 UTC; SMC dari indikator TradingView (logika LuxAlgo) ±00:10 UTC; DXY/XAU/USDIDR per close Jumat 27 Nov (pasar tradisional tutup akhir pekan)",
+ "risk_regime": "RISK-OFF · EXTREME FEAR (F&amp;G 9) · BTC FAKE-BREAKOUT 62.2K → CLOSE 59.9K · LIKUIDASI BTC $187M · XAU +2.4% &amp; DXY KEMBALI DI ATAS 104",
+ "headline": "<b>Close D1 BTC 27 Nov: 59,923 (-1.1%)</b>. Pagi UTC, BTC sempat menembus lower high 61,622 (H4 close 61,673 → <b>CHoCH↑ H4</b>) dan naik sampai <b>62,249</b>. Breakout itu gagal: bar H4 12:00 UTC jatuh dari 61,707 ke <b>58,792</b>, dan likuidasi BTC 24 jam naik ke $187M (+472%). Hasilnya pola <b>deviation / liquidity grab</b> di atas 61.6k, dengan Bear FVG H4 besar baru di 60,560–61,416. Secara teknis H4 tercatat bullish, tetapi harga sudah kembali di bawah level break. Di pasar tradisional (Jumat), <b>XAU +2.4% ke 3,652</b> bersamaan dengan <b>DXY kembali di atas 104</b> (104.04). USDIDR naik ke 18,375.",
+ "market": [
+  {"asset": "BTCUSDT", "price": "59,931", "d1": "+0.1%", "w1": "+1.8%", "m1": "-26.2%", "note": "Close 27 Nov 59,923; range 58,792–62,249. Breakout di atas 61,622 gagal."},
+  {"asset": "ETHUSDT", "price": "1,663", "d1": "+0.2%", "w1": "+2.6%", "m1": "-29.4%", "note": "Close 27 Nov 1,662 (-1.6%). H4 CHoCH↑ 1,730 lalu turun; Bear FVG H4 baru 1,688–1,718."},
+  {"asset": "HYPEUSDT.P", "price": "63.68", "d1": "+0.2%", "w1": "+4.3%", "m1": "-21.0%", "note": "Close 27 Nov 63.52 (+2.0%); wick 66.78 menyentuh Bear OB H4 66.62. Funding berbalik negatif."},
+  {"asset": "LIGHTERUSDT", "price": "2.678", "d1": "-0.1%", "w1": "+13.6%", "m1": "-8.8%", "note": "Close 27 Nov 2.683 (+8.3%) di puncak Bear FVG D1 2.439–2.693 dan di dalam Bear OB H4 2.599–2.777."},
+  {"asset": "DXY", "price": "104.04", "d1": "+0.2%", "w1": "+0.1%", "m1": "+1.6%", "note": "Kembali di atas 104 dan masuk Bear FVG H4 104.00–104.26. H4 masih tercatat CHoCH↓ 103.75."},
+  {"asset": "USDIDR", "price": "18,375", "d1": "+0.4%", "w1": "+1.2%", "m1": "+1.1%", "note": "High baru di atas range 18,267; rupiah melemah empat sesi berturut."},
+  {"asset": "XAUUSD", "price": "3,652", "d1": "+2.4%", "w1": "+0.5%", "m1": "-10.2%", "note": "H4 CHoCH↑ 3,607 → bullish. Harga masuk Bear FVG D1 3,637–3,720."}
+ ],
+ "sentiment": {
+  "fear_greed": {"index": 9, "label": "Extreme Fear"},
+  "metrics": [
+   ["F&amp;G kemarin / minggu lalu / bulan lalu", "9 / 8 / 46 (Neutral)"],
+   ["F&amp;G terendah 2026", "5 (6 Feb 2026)"],
+   ["Altcoin Season Index", "61 (minggu lalu 43)"],
+   ["BTC Dominance", "58.58% (kemarin 58.75%)"],
+   ["Avg funding global", "+0.0062% (kemarin +0.0057%)"],
+   ["Open Interest global", "$255.5B (-2.3% 24h, -21.4% 7d) — terendah 2026"],
+   ["Likuidasi BTC 24h / 7d", "$187M (+472%) / $1.80B"],
+   ["AUM ETF spot BTC / ETH", "$79.30B (datar vs laporan kemarin $79.29B; minggu lalu $87.23B) / $14.49B"],
+   ["Volume 24h total / spot", "$819.9B (-22.2%) / $72.7B (-14.8%)"]
+  ],
+  "trend": "Snapshot CoinMarketCap 28 Nov 00:00 UTC (F&amp;G, Altseason, ETF AUM harian; OI/funding intraday).",
+  "read": "<b>Bacaan:</b> OI global turun ke level terendah 2026 ($255.5B), dan breakout palsu kemarin menyapu posisi di kedua arah ($187M terlikuidasi). AUM ETF berhenti turun untuk pertama kali dalam beberapa hari, dan CMC mencatat spot CVD BTC 7 hari berbalik positif (+$189M), tanda awal pembeli spot kembali masuk. F&amp;G masih 9. Rotasi ke altcoin terlihat lewat Altseason 61 (dari 43 sepekan lalu), dipimpin LIGHTER dan HYPE."
+ },
+ "derivatives": [
+  {"ticker": "BTC", "funding": "+0.0063%", "regime": "Mild positive", "oi7d": "+6.5%", "oi_mcap": "1.3%", "liq": "60,001 / 61,496 · 57,252 / 56,953", "read": "Tekanan likuidasi kini dominan di BAWAH (56.95–57.25k). Spot CVD 7 hari +$189M (pertama kali positif); belum terkonfirmasi persisten."},
+  {"ticker": "ETH", "funding": "+0.0044%", "regime": "Neutral", "oi7d": "-7.2%", "oi_mcap": "4.7%", "liq": "1,665 / 1,722 · 1,607 / 1,600", "read": "Spot selling tidak menurunkan harga (indikasi absorpsi pasif). Likuidasi bawah dominan di 1,600–1,607."},
+  {"ticker": "HYPE", "funding": "-0.0061%", "regime": "Mild negative", "oi7d": "+9.1%", "oi_mcap": "3.5%", "liq": "67.39 / 67.73 · 59.46 / 58.28", "read": "Harga +9.6% sepekan dengan funding negatif = short menumpuk saat harga naik. Cluster bawah 59.46 sangat besar."},
+  {"ticker": "LIGHTER", "funding": "+0.0025%", "regime": "Neutral", "oi7d": "+14.4%", "oi_mcap": "13.9%", "liq": "2.750 / 2.770 · 2.557 / 2.457", "read": "+17.5% sepekan dengan spot buying terkonfirmasi (CMC). OI/MCap 13.9%: perp berpengaruh material."},
+  {"ticker": "DXY / USDIDR / XAU", "funding": "n/a", "regime": "bukan perp crypto", "oi7d": "-", "oi_mcap": "-", "liq": "-", "read": "Dipantau lewat struktur harga &amp; kalender makro."}
+ ],
+ "geopolitics": [
+  {"title": "Iran – Selat Hormuz / blokade AS", "detail": "Belum ada kabar baru terverifikasi untuk 26–27 Nov. Konteks terakhir: USNI (19 Nov) melaporkan AS memperluas blokade terhadap Iran; tercatat 16 serangan ke kapal komersial pada November (sampai 19 Nov), dibanding 34 serangan pada Oktober, angka bulanan tertinggi sejak perang dimulai. UANI (18 Nov): pemberitahuan blokade kini mencakup kapal yang melakukan ship-to-ship transfer kargo asal Iran.", "impact": "Blokade yang meluas menekan ekspor Iran dan membuka risiko Iran membalas lewat serangan kapal. Ini salah satu kemungkinan pendorong permintaan safe haven (XAU +2.4% Jumat), meski pemicu spesifiknya belum terverifikasi."},
+  {"title": "Sanksi &amp; crypto", "detail": "BeInCrypto (via TradingView): VTB, bank terbesar kedua Rusia yang di-blacklist AS terkait Iran, dilaporkan menjual Bitcoin.", "impact": "Supply BTC dari entitas tersanksi menambah tekanan jual. Skalanya belum diketahui."},
+  {"title": "Rusia – Ukraina / China", "detail": "Tidak ada perkembangan baru terverifikasi.", "impact": "Tail risk."}
+ ],
+ "geoeconomics": [
+  {"title": "Arus whale vs ETF", "detail": "TradingView News: whale mengakumulasi ±121,000 BTC di Q4 (Benzinga) atau senilai $7.4B, memecah pola sembilan tahun (NewsBTC); Cointelegraph mencatat whale terus membeli walau bantalan profit menyempit. CZ menyebut BTC di $60,000 menarik (Bloomingbit). CryptoQuant: pemulihan harga butuh pertumbuhan suplai USDT (The Block).", "impact": "Ini kontras dengan laporan kemarin soal distribusi whale 150k BTC, jadi sinyal on-chain campur. Bersama spot CVD positif dan AUM ETF yang datar, ada tanda awal stabilisasi permintaan."},
+  {"title": "Sentimen musiman", "detail": "Benzinga membandingkan pola Thanksgiving tahun ini dengan aksi jual Thanksgiving 2018 yang berlanjut ke penurunan Desember. Cointelegraph: BTC turun di bawah $59K saat saham teknologi rebound.", "impact": "BTC melemah saat saham teknologi naik = BTC tertinggal dari risk asset. Narasi analog 2018 menambah tekanan psikologis."},
+  {"title": "Regulasi Asia", "detail": "Bloomingbit: Malaysia menyetujui ETF spot Bitcoin pertamanya, peluncuran dijadwalkan 2 Des.", "impact": "Positif secara struktural untuk akses institusi di ASEAN. Arus awal kemungkinan kecil."},
+  {"title": "Makro AS pekan depan", "detail": "ISM Mfg (kons. 55.0) &amp; JOLTS (kons. 7.5 jt) 1 Des; ISM Services (kons. 54.6) 3 Des; NFP Nov (kons. 90K, sebelumnya 165K) &amp; Unemployment 4.1% pada 4 Des; UMich prelim (kons. 52.5) — TradingView Economic Calendar.", "impact": "DXY kembali di atas 104 menjelang data ini. Data kuat → skenario C; NFP lemah → DXY kembali ke 103.5."}
+ ],
+ "worst_case": [
+  {"scenario": "A. Breakout gagal → retest 57.3k", "prob": "~30% (naik dari 25%)", "trigger": "Deviation di atas 61,622 sudah terjadi. H4 close di bawah Bull FVG H4 58,922 dan low 58,792 mengonfirmasi.", "usd": "DXY lanjut di atas 104.26 (Bear FVG H4) → 104.43–104.53. USDIDR menuju 18,400+.", "btc": "BTC ke cluster likuidasi 57,252 / 56,953 → Bull OB H4 57,300–58,111 → Bull OB H4 55,130–56,901. ETH ke Bull OB H4 1,609–1,640 → 1,538.", "alts": "HYPE kehilangan 61.47 → Bull OB H4 56.94–59.43 (cluster 59.46). LIGHTER ditolak di Bear OB H4 → 2.53–2.57 → 2.43–2.45."},
+  {"scenario": "B. Hormuz eskalasi", "prob": "~20%", "trigger": "Respons Iran terhadap blokade yang diperluas (serangan tanker/ranjau baru); Brent kembali di atas $100.", "usd": "USD &amp; XAU sama-sama naik (pola Jumat); USDIDR 18,500.", "btc": "Wick BTC 52–55k (Bull OB D1 52,550–54,779), ETH ~1,450.", "alts": "Alts -20–30%."},
+  {"scenario": "C. Repricing Fed hawkish", "prob": "~15%", "trigger": "ISM (1 Des) &amp; NFP (4 Des) kuat, di atas GDP Q3 4.3% → pasar memprice kenaikan 50bp di FOMC 8–9 Des.", "usd": "D1 DXY bullish → Bear FVG D1 104.39–105.53. USDIDR 18,500+.", "btc": "BTC tembus 55,130 → Bull OB D1 52,550–54,779. ETH ke Bull FVG D1 1,398–1,448.", "alts": "HYPE ~53–56. XAU gagal di Bear FVG D1 → kembali ke 3,427."},
+  {"scenario": "D. Capitulation / contagion", "prob": "~10%", "trigger": "Penambang di bawah biaya produksi, entitas tersanksi menjual BTC, likuiditas akhir pekan tipis.", "usd": "DXY campur, JPY naik.", "btc": "Flash crash 15–20%: BTC 48–50k.", "alts": "HYPE/LIGHTER -30–40% (LIGHTER rawan setelah +17.5% sepekan)."},
+  {"scenario": "Invalidasi worst case", "prob": "~25% (turun dari 30%)", "trigger": "BTC reclaim dan H4 close di atas 61,416 (Bear FVG H4) lalu 62,249 (high deviation), spot CVD tetap positif, DXY kembali di bawah 103.75.", "usd": "DXY ke Bull FVG H4 103.52–103.61; USDIDR kembali di bawah 18,303.", "btc": "BTC → Bear OB H4 62,837–64,603. ETH reclaim 1,718 → 1,779–1,845.", "alts": "HYPE tembus 66.78 → Bear OB H4 66.62–69.77; LIGHTER tembus 2.777 → 2.96–3.06. Struktur D1 BTC tetap bearish (BOS↓ 79,800)."}
+ ],
+ "btc_usd_link": [
+  "<b>Jumat: dolar dan emas naik bersama, BTC turun.</b> DXY +0.25% ke 104.04, XAU +2.4% ke 3,652, BTC -1.1%. Kombinasi ini pola safe haven klasik, dan BTC tidak ikut diperlakukan sebagai lindung nilai. Pemicu spesifik kenaikan emas belum terverifikasi; salah satu kandidat adalah eskalasi blokade AS–Iran.",
+  "<b>Perubahan dari laporan 27 Nov:</b> (1) BTC menembus lower high 61,622 (H4 CHoCH↑) sampai 62,249 lalu jatuh ke 58,792 — breakout gagal; (2) likuidasi BTC $187M; (3) OI global $255.5B, terendah 2026; (4) AUM ETF berhenti turun ($79.3B) dan spot CVD BTC 7 hari berbalik positif; (5) ETH H4 CHoCH↑ 1,730 juga gagal bertahan; (6) LIGHTER +8.3% dan HYPE +2.0% — Altseason 43→61 dalam sepekan; (7) XAU H4 CHoCH↑ 3,607; (8) DXY kembali di atas 104; (9) USDIDR high baru 18,375.",
+  "<b>Level kunci akhir pekan (likuiditas tipis):</b> supply BTC 60,560–61,416 (Bear FVG H4 baru) + 60,996–61,428 (Bear FVG D1) + high deviation 62,249. Demand: Bull FVG H4 58,922–59,795 (harga di tepi atas), low 58,792, Bull OB H4 57,300–58,111 dengan cluster likuidasi 56.95–57.25k di bawahnya."
+ ],
+ "chart_zones": {
+  "1D": {
+   "structure": "BOS BEARISH (break 79,800)",
+   "bias": "BEARISH",
+   "zones": [
+    ["bullish", "OB", 55130, 58063],
+    ["bullish", "OB", 52550, 54779],
+    ["bearish", "OB", 65883.1, 68446.21],
+    ["bearish", "OB", 78063.2, 80918.01],
+    ["bullish", "FVG", 55318, 56386.4],
+    ["bullish", "FVG", 51958.55, 54450.13],
+    ["bearish", "FVG", 60996, 61428.26],
+    ["bearish", "FVG", 66132.01, 67568],
+    ["bearish", "FVG", 68446.21, 71113.06]
+   ]
+  },
+  "4h": {
+   "structure": "CHoCH BULLISH (break 61,622) — harga kembali di bawah",
+   "bias": "BULLISH (rapuh)",
+   "zones": [
+    ["bullish", "OB", 57300.38, 58111.27],
+    ["bullish", "OB", 55130, 56901.03],
+    ["bearish", "OB", 62836.56, 64603.12],
+    ["bearish", "OB", 70020.95, 71514.01],
+    ["bullish", "FVG", 58922.16, 59795.23],
+    ["bullish", "FVG", 55799, 56810],
+    ["bearish", "FVG", 60559.62, 61415.65],
+    ["bearish", "FVG", 63408.62, 63565.52],
+    ["bearish", "FVG", 63537.89, 64120]
+   ]
+  }
+ },
+ "smc_table": [
+  {"ticker": "BTCUSDT", "d1": "BEARISH · BOS↓ 79,800. Close 27 Nov 59,923 (range 58,792–62,249) (TradingView/LuxAlgo)", "h4": "BULLISH (rapuh) · CHoCH↑ 61,622 (27 Nov 04:00 UTC), harga kembali di bawah", "m30": "BEARISH · CHoCH↓ 60,391 (27 Nov 10:30 UTC). Swing 62,249 / 58,792", "align": "D1↓ H4↑ M30↓ (breakout H4 gagal)", "zones": "Atas: Bear FVG M30 59,915–61,250 · Bear FVG H4 60,560–61,416 · Bear OB M30 60,260–61,438 · Bear FVG D1 60,996–61,428 · Bear OB M30 61,625–62,249 · Bear OB H4 62,837–64,603. Bawah: Bull FVG H4 58,922–59,795 · Bull FVG M30 58,718–59,122 · Bull OB H4 57,300–58,111 · Bull OB D1 55,130–58,063 · Bull OB H4 55,130–56,901"},
+  {"ticker": "ETHUSDT", "d1": "BEARISH · BOS↓ 2,174 (TradingView/LuxAlgo)", "h4": "BULLISH (rapuh) · CHoCH↑ 1,730 (27 Nov). Swing 1,755 / 1,609", "m30": "BEARISH · CHoCH↓ 1,684 (27 Nov)", "align": "D1↓ H4↑ M30↓ (breakout H4 gagal)", "zones": "Atas: Bear FVG M30 1,660–1,670 · Bear FVG H4 1,688–1,718 · Bear OB M30 1,688–1,724 · Bear FVG D1 1,717–1,736 · Bear OB H4 1,779–1,845. Bawah: Bull FVG M30 1,648–1,658 · Bull OB H4 1,609–1,640 · Bull OB H4 1,538–1,598 · Bull FVG H4 1,534–1,541"},
+  {"ticker": "HYPEUSDT.P", "d1": "BEARISH · BOS↓ 60.01; close 63.52 di dalam Bear FVG D1 61.87–65.91 (TradingView/LuxAlgo)", "h4": "BEARISH · CHoCH↓ 65.06. Swing 66.78 / 56.09", "m30": "BEARISH · CHoCH↓ 65.22 (27 Nov)", "align": "D1↓ H4↓ M30↓ (selaras bearish)", "zones": "Atas: Bear FVG M30 63.79–64.24 · Bear OB M30 64.56–65.66 · Bear FVG H4 65.04–65.36 · Bear FVG D1 61.87–65.91 (harga di dalam) · Bear OB H4 66.62–69.77. Bawah: Bull FVG M30 63.06–64.55 · Bull FVG D1 62.20–62.22 · Bull FVG H4 61.47–61.84 · Bull OB M30 61.48–61.91 · Bull OB H4 56.94–59.43"},
+  {"ticker": "LIGHTERUSDT", "d1": "BEARISH · BOS↓ 2.590 (swing high struktur 3.569); close 2.683 (TradingView/LuxAlgo)", "h4": "BEARISH · CHoCH↓ 2.261. Swing 2.777 / 2.174", "m30": "n/a", "align": "D1↓ H4↓ (harga reli ke supply)", "zones": "Atas: Bear FVG D1 2.439–2.693 (harga di puncak) · Bear OB H4 2.599–2.777 (harga di dalam) · Bear FVG H4 2.782–2.805 · Bear OB H4 2.962–3.056. Bawah: Bull FVG H4 2.529–2.567 · Bull FVG D1 2.433–2.474 · Bull FVG H4 2.433–2.449 · Bull OB H4 2.174–2.249"},
+  {"ticker": "DXY", "d1": "BULLISH · BOS↑ 102.49 (tanpa OB, tak ada volume)", "h4": "BEARISH · CHoCH↓ 103.75, tapi close 104.04 di atasnya", "m30": "n/a", "align": "D1↑ H4↓ (H4 diuji)", "zones": "Atas: Bear FVG H4 104.00–104.26 (harga di dalam) · Bear FVG H4 104.43–104.52 · swing high 104.53 · Bear FVG D1 104.39–105.53. Bawah: Bull FVG H4 103.88–103.98 · Bull FVG H4 103.52–103.61 · Bull FVG D1 103.24–103.33"},
+  {"ticker": "USDIDR", "d1": "BULLISH · BOS↑ 18,183 (16 Nov); close 18,375 (high baru)", "h4": "n/a (kuotasi FX_IDC jarang)", "m30": "n/a", "align": "Bias naik, searah DXY", "zones": "Atas: belum ada FVG/OB di atas harga. Bawah: Bull FVG D1 18,220–18,303 · 18,183 (BOS) · Bull FVG D1 17,925–17,943"},
+  {"ticker": "XAUUSD", "d1": "BEARISH · BOS↓ 3,870 (TradingView/LuxAlgo)", "h4": "BULLISH · CHoCH↑ 3,607 (27 Nov)", "m30": "n/a", "align": "D1↓ H4↑ (pullback ke supply D1)", "zones": "Atas: Bear FVG D1 3,637–3,720 (harga di dalam) · Bear OB H4 3,668–3,690 · Bear FVG H4 3,687–3,711 · Bear FVG H4 3,718–3,725. Bawah: Bull FVG H4 3,594–3,639 · Bull FVG H4 3,570–3,591 · Bull FVG H4 3,528–3,551 · Bull OB H4 3,427–3,477"}
+ ],
+ "smc_note": [
+  "<b>BTC (TradingView/LuxAlgo):</b> laporan kemarin menyebut H4 close di atas 61,622 sebagai invalidasi. Close itu terjadi (61,673, 27 Nov 04:00 UTC) dan harga sempat ke 62,249, tetapi dalam 8 jam harga jatuh 3,400 poin ke 58,792. Pola ini <b>deviation / SFP</b>: likuiditas di atas lower high diambil lalu dijual. Jejaknya: Bear FVG H4 besar 60,560–61,416, Bear OB M30 60,260–61,438 dan 61,625–62,249, serta M30 CHoCH↓ 60,391. Label H4 masih bullish (CHoCH↑), tetapi selama harga di bawah 60,560, yang lebih relevan adalah kegagalan breakout. Demand terdekat: Bull FVG H4 58,922–59,795 lalu low 58,792.",
+  "<b>ETH</b> mengalami deviation yang sama (H4 CHoCH↑ 1,730 lalu turun ke 1,662). <b>HYPE.P</b> menyentuh Bear OB H4 66.62 lalu M30 CHoCH↓. <b>LIGHTER</b> reli 8% tepat ke supply (puncak Bear FVG D1 dan Bear OB H4). <b>XAU</b> kini H4 bullish dan menguji Bear FVG D1 3,637–3,720. <b>DXY</b> kembali di atas 104."
+ ],
+ "calendar": [
+  {"date": "Sabtu–Minggu 28–29 Nov", "event": "Akhir pekan (pasar tradisional tutup)", "why": "Likuiditas crypto tipis; gap DXY/XAU Senin bila ada berita geopolitik."},
+  {"date": "29 Nov", "event": "Rapat OPEC+ (dari laporan sebelumnya)", "why": "Jalur minyak &amp; inflasi, di tengah blokade Hormuz."},
+  {"date": "Senin 30 Nov · 08:30 WIB", "event": "China NBS Manufacturing PMI (kons. 49.4, sebelumnya 49.3)", "why": "Permintaan global."},
+  {"date": "Selasa 1 Des", "event": "RatingDog China Mfg PMI 08:45 WIB (kons. 51.5) · EU HICP flash 17:00 WIB (kons. 3.9%) · ISM Manufacturing 22:00 WIB (kons. 55.0) · JOLTS 22:00 WIB (kons. 7.5 jt)", "why": "Penentu skenario C."},
+  {"date": "Rabu 2 Des", "event": "Japan Consumer Confidence 12:00 WIB (sebelumnya 35) · Peluncuran ETF spot BTC Malaysia", "why": "JPY &amp; carry trade; akses institusi ASEAN."},
+  {"date": "Kamis 3 Des · 22:00 WIB", "event": "ISM Services PMI (kons. 54.6)", "why": "Sektor jasa ±90% ekonomi AS."},
+  {"date": "Jumat 4 Des · 20:30 WIB", "event": "NFP Nov (kons. 90K, sebelumnya 165K) · Unemployment (kons. 4.1%) · 22:00 WIB UMich prelim (kons. 52.5)", "why": "Data tenaga kerja terakhir sebelum FOMC."},
+  {"date": "8–9 Des", "event": "FOMC", "why": "Keputusan suku bunga terakhir 2026."}
+ ],
+ "sources": [
+  "TradingView — indikator 'SMC Export - LuxAlgo OB FVG + Structure' (logika Order Block Detector &amp; Fair Value Gap [LuxAlgo], © LuxAlgo CC BY-NC-SA 4.0): BINANCE:BTCUSDT, BINANCE:ETHUSDT, BINANCE:HYPEUSDT.P (D1/H4/M30); BINGX:LIGHTERUSDT.P, OANDA:XAUUSD, TVC:DXY (D1/H4); FX_IDC:USDIDR (D1)",
+  "TradingView — snapshot harga &amp; OHLCV (28 Nov 2026 ±00:10 UTC), Economic Calendar 27 Nov–5 Des",
+  "TradingView News — BeInCrypto: VTB jual BTC · Benzinga: whale +121k BTC di Q4; analog Thanksgiving 2018 · NewsBTC: akumulasi whale $7.4B · Cointelegraph: whale terus membeli; BTC di bawah $59K saat saham teknologi rebound · Bloomingbit: CZ soal $60k; ETF spot BTC Malaysia 2 Des · The Block: CryptoQuant soal suplai USDT",
+  "CoinMarketCap — global metrics (F&amp;G, Altseason, OI, funding, ETF AUM, volume) &amp; perp_contract_analysis BTC/ETH/HYPE/LIGHTER (28 Nov 00:07 UTC)",
+  "Geopolitik: USNI News (19 Nov 2026) — perluasan blokade AS, jumlah serangan Okt/Nov; UANI Iran Shipping Update (18 Nov 2026). Tidak ada kabar baru terverifikasi untuk 26–27 Nov; pemicu kenaikan XAU Jumat belum terverifikasi."
+ ]
+}
